@@ -10,18 +10,18 @@ export default function ProductInfo() {
 
   useEffect(() => {
     getData();
-  }, []);
-
-  async function getData() {
-    try {
-      const productItem = await getDoc(
-        doc(fireDB, "products", params.productid)
-      );
-      setProduct(productItem.data());
-    } catch (error) {
-      console.log(error);
+    async function getData() {
+      try {
+        const productItem = await getDoc(
+          doc(fireDB, "products", params.productid)
+        );
+        setProduct(productItem.data());
+      } catch (error) {
+        console.log(error);
+      }
     }
-  }
+  }, [params.productid]);
+
   console.log("ProductInfo page redered...");
   return (
     <LayOut>

@@ -41,3 +41,15 @@
 .productInfo-img {
   max-width: 50vh;
 }
+
+.totalAmount {
+  background-color: #d2848c;
+  padding: 5px;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.totalAmount:hover {
+  background-color: #003f5c;
+  color: white;
+}
